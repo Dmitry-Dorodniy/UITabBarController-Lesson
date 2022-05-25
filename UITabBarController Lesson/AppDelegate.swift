@@ -15,7 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+// После удаления storyboard прописываем
+        // (1)
+        window = UIWindow(frame: UIScreen.main.bounds)
+        // (2)
+        let viewController = ViewController()
+        window?.rootViewController = viewController
+        // (3)
+        window?.makeKeyAndVisible()
 
 //                if #available(iOS 15, *) {
 //                    let navigationBarAppearance = UINavigationBarAppearance()
@@ -86,8 +94,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
 
     }
-
-    // MARK: UISceneSession Lifecycle
 
 }
 
